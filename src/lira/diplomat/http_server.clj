@@ -1,9 +1,9 @@
 (ns lira.diplomat.http-server
-  (:require [common-clj.component.telegram.consumer :as component.telegram.consumer]
+  (:require #_[common-clj.component.telegram.consumer :as component.telegram.consumer]
             [lira.diplomat.telegram.consumer :as diplomat.telegram.consumer]
             [lira.diplomat.http-server.request :as diplomat.http-server.request]))
 
-(def routes [["/api/handler" :post [(fn telegram-bot-handler
+(def routes [#_["/api/handler" :post [(fn telegram-bot-handler
                                       [{update     :json-params
                                         components :components}]
                                       (component.telegram.consumer/consume-update! update diplomat.telegram.consumer/consumers components)
