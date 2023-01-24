@@ -6,4 +6,5 @@
 (s/defn log-request
   [{{:keys [config]} :components :as wire-request}]
   (-> (adapters.request/wire->request wire-request)
-      (controllers.request/log-request! config)))
+      (controllers.request/log-request! config))
+  {:status 202})
