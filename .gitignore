@@ -16,3 +16,4 @@ pom.xml.asc
 /.lsp/.cache/
 /.clj-kondo/.cache/
 /lira.iml
+/resources/config.edn
