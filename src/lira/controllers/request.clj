@@ -12,7 +12,6 @@
    {:keys [telegram] :as config}]
   (diplomat.io/save-to-file request)
   (-> (logic.request/filepath request)
-      io/resource
       io/file
       (diplomat.telegram.producer/send-document! (:chat-id telegram) (:token telegram)))
   (-> (logic.request/filepath request)
